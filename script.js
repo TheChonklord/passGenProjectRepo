@@ -15,8 +15,8 @@ function writePassword() {
 // if this is running as intended, with each confirm it's adding that particular string to the var passChar, which i will eventually split every 
 // individual character into and pick with the math.random function 
 function generatePassword() {
-    var passChar = ["",]
-    var passLength = 0
+    var passChar = [""]
+    var passLength = 8
     if (confirm("Lowercase? ")) {
         passChar.push("abcdefghijklmnopqrstuvwxyz")
     } else {
@@ -36,7 +36,7 @@ function generatePassword() {
         passChar.push("!@#$%^&*?") 
     } else {
         console.log("no ");
-    }
+    } 
 };
 
 // Add event listener to generate button
@@ -50,7 +50,6 @@ generateBtn.addEventListener("click", writePassword);
 // setup 2 alerts, one for less than 8, one for more than 128 characters chosen
 // I think go back to the password length after 
 
-var passLength = 12;
 
 // SERIES OF CONFIRMS
 // lowercase 
