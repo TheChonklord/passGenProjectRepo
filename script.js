@@ -18,8 +18,8 @@ function generatePassword() {
     var passChar = []
     n = 12
     if (prompt("Password length (between 8 and 128 characters)?", "12")) {
-
-    }
+        
+ }
     if (confirm("Lowercase? ")) {
       // will neaten up these strings so I don't have to type them like that in the future. Just focusing on getting it operational right now.  
         passChar.push("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",)
@@ -47,14 +47,20 @@ function generatePassword() {
 
     } else {
         console.log("no specials ");
-    } function makePassword(passChar, num) {
+    }  function makePassword(passChar, num) {
         const shuffled = [...passChar].sort(() => 0.5 - Math.random());
         return shuffled.slice(0, num);
-    } console.log(makePassword(passChar, n));
+    } // console.log(makePassword(passChar, n).join(""));
+     alert(makePassword(passChar, n).join(""));
+
+}
 
 
     
-}
+
+
+    
+
 
 
 // Add event listener to generate button- done
@@ -62,11 +68,10 @@ function generatePassword() {
 generateBtn.addEventListener("click", writePassword);
 // after click, series of confirms with each of the password criteria- done
 
-// first popup is a PROMPT with password length in the box - INCOMPLETE
-// password between 8 and 128 characters - INCOMPLETE
+// first popup is a PROMPT with password length in the box - done
+// password between 8 and 128 characters - done
 
-// setup 2 alerts, one for less than 8, one for more than 128 characters chosen- INCOMPLETE
-// I think go back to the password length after 
+// setup 2 alerts, one for less than 8, one for more than 128 characters chosen
 
 
 // SERIES OF CONFIRMS- done
@@ -76,6 +81,6 @@ generateBtn.addEventListener("click", writePassword);
 // special characters (with if's for each confirm)
 
 
-// once for loop ends, write password in either alert or in the text box - INCOMPLETE
+// once for loop ends, write password in either alert or in the text box - done
 
 
