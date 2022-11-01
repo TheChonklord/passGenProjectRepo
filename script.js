@@ -16,10 +16,11 @@ function writePassword() {
 // individual character into and pick with the math.random function 
 function generatePassword() {
     var passChar = []
-    n = 12
-    if (prompt("Password length (between 8 and 128 characters)?", "12")) {
-        
- }
+    
+    var n = prompt("Password length (between 8 and 128 characters)?", "12") 
+        if (n.value < 8, n.value > 128) {
+        alert("Invalid number of characters. Please try again. ")
+        } else 
     if (confirm("Lowercase? ")) {
       // will neaten up these strings so I don't have to type them like that in the future. Just focusing on getting it operational right now.  
         passChar.push("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",)
@@ -52,10 +53,9 @@ function generatePassword() {
         return shuffled.slice(0, num);
     } // console.log(makePassword(passChar, n).join(""));
      alert(makePassword(passChar, n).join(""));
-
 }
 
-
+// code seems fully functional, do final commit, take screenshots, submit! 
     
 
 
